@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+  <div class="Title">
+    Tic Tac Toe
+  </div>
+  <div class="modal">
+    <div class="modal-content">
+      <span class="content-here"></span>
+      <button class="close-button">Click To Restart</button>
+    </div>
+  </div>
+  <div class="Board">
+    <div class="turn">Black's Turn
+    </div>
+    <div class="rows">
+      <div data-type = "poop" id = "a1" class="box">
+      </div>
+      <div data-type = "poop" id = "a2" class="box">
+      </div>
+      <div data-type = "poop" id = "a3" class="box">
+      </div>
+    </div>
+    <div class="rows">
+      <div  data-type = "poop" id = "b1" class="box">
+      </div>
+      <div data-type = "poop" id = "b2" class="box">
+      </div>
+      <div data-type = "poop" id = "b3" class="box">
+      </div>
+    </div>
+    <div class="rows">
+      <div data-type = "poop" id = "c1" class="box">
+      </div>
+      <div data-type = "poop" id = "c2" class="box">
+      </div>
+      <div data-type = "poop" id = "c3" class="box">
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+  <script>
+    let whosTurn = document.querySelector(".turn")
+    let modal = document.querySelector(".modal");
+    let modalContent = document.querySelector(".content-here")
+    let closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", CloseModal);
+    function ToggleModal() {
+      modal.classList.toggle("show-modal")
+    }
+    function CloseModal() {
+      modalContent.innerHTML = ""
+      modal.classList.toggle("show-modal")
+      reset()
+    }
+  </script>
+</body>
+</html>
